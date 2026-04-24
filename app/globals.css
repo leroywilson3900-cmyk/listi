@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #0a0f1c;
+    color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-dark-200/60 border border-white/5 rounded-xl p-5;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-3 bg-brand-500 text-white rounded-lg font-semibold text-sm transition-all hover:shadow-lg hover:shadow-brand-500/25 active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-5 py-3 bg-dark-200 text-white rounded-lg font-semibold text-sm border border-white/10 transition-all hover:bg-dark-300 active:scale-[0.98];
+  }
+  .input-field {
+    @apply w-full px-4 py-3 bg-dark-100 border border-white/10 rounded-lg text-sm text-white placeholder:text-dark-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/30 transition-all;
+  }
+  .stat-card {
+    @apply bg-dark-200/60 border border-white/60 rounded-xl p-4;
+  }
+  .platform-badge {
+    @apply text-[10px] font-bold px-1.5 py-0.5 rounded bg-brand-500/20 text-brand-400 uppercase;
+  }
+  .status-active {
+    @apply text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400;
+  }
+  .status-sold {
+    @apply text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-500/20 text-red-400;
+  }
+}
